@@ -13,5 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="MyEngineGame">
+      <UniqueIdentifier>{114a03f3-eb48-4134-9a20-ca3f0429aaa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyEngineGame\Application">
+      <UniqueIdentifier>{55ac6be4-3fa2-4acb-b319-eba8324863fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyEngineGame\Application\Main">
+      <UniqueIdentifier>{9f7098df-e150-4f0a-97e6-cd8375803fdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyEngineGame\Application\Windows">
+      <UniqueIdentifier>{c905ddfa-7045-4310-b969-de07211938cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyEngineGame\Application\Utility">
+      <UniqueIdentifier>{92a7a6a8-3a93-433d-a8e4-53c4494ac357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyEngineGame\Application\RenderingPipline">
+      <UniqueIdentifier>{12666f9f-69da-48a4-aaf4-1a227a4dd9dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyEngineGame\Application\RenderingPipline\DirectX">
+      <UniqueIdentifier>{b826a596-ee27-4d6d-864a-1d7016ed45d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyEngineGame\Application\RenderingPipline\Shader">
+      <UniqueIdentifier>{fa84283a-37ef-4627-9b60-656e3a332cc6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application\Main\ApplicationMain.cpp">
+      <Filter>MyEngineGame\Application\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Windows\Window.cpp">
+      <Filter>MyEngineGame\Application\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\DXGI.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\RenderingPipline.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\Windows\Window.h">
+      <Filter>MyEngineGame\Application\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\DXGI.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\RenderingPipline.h">
+      <Filter>MyEngineGame\Application\RenderingPipline</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
