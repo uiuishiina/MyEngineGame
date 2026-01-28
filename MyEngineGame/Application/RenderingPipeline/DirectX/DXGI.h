@@ -37,6 +37,6 @@ namespace MyEngineGame::RenderingPipline {
 	private:
 		//…　クラス変数　…//
 		Microsoft::WRL::ComPtr<IDXGIFactory4> DXGIFactory_{};	//DXGIファクトリー
-		IDXGIAdapter1* DXGIAdapter_{};	//ディスプレイアダプター
+		Microsoft::WRL::ComPtr<IDXGIAdapter1> DXGIAdapter_{};	//ディスプレイアダプター
 	};
 }

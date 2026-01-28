@@ -51,6 +51,9 @@
     <ClCompile Include="Application\RenderingPipeline\RenderingPipline.cpp">
       <Filter>MyEngineGame\Application\RenderingPipline</Filter>
     </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\Device.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\Windows\Window.h">
@@ -61,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="Application\RenderingPipeline\RenderingPipline.h">
       <Filter>MyEngineGame\Application\RenderingPipline</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\Device.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

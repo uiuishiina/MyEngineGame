@@ -125,11 +125,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application\Main\ApplicationMain.cpp" />
+    <ClCompile Include="Application\RenderingPipeline\DirectX\Device.cpp" />
     <ClCompile Include="Application\RenderingPipeline\DirectX\DXGI.cpp" />
     <ClCompile Include="Application\RenderingPipeline\RenderingPipline.cpp" />
     <ClCompile Include="Application\Windows\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\Device.h" />
     <ClInclude Include="Application\RenderingPipeline\DirectX\DXGI.h" />
     <ClInclude Include="Application\RenderingPipeline\RenderingPipline.h" />
     <ClInclude Include="Application\Windows\Window.h" />

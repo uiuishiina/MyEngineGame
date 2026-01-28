@@ -80,7 +80,7 @@ namespace MyEngineGame {
         return true;
     }
 
-    //@brief	//…　ウィンドウハンドル関数　…//
+    //@brief	//…　ウィンドウハンドル取得関数　…//
     //@return	ウィンドウハンドル
     [[nodiscard]] HWND Window::GetHandle()const noexcept {
         if (!MyHandle_) {

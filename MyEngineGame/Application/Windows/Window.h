@@ -28,7 +28,7 @@ namespace MyEngineGame {
 		//@return	ループの可否
 		[[nodiscard]] bool MessageLoop() const noexcept;
 
-		//@brief	//…　ウィンドウハンドル関数　…//
+		//@brief	//…　ウィンドウハンドル取得関数　…//
 		//@return	ウィンドウハンドル
 		[[nodiscard]] HWND GetHandle()const noexcept;
 
