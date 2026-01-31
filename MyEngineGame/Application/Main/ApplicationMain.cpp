@@ -39,7 +39,7 @@ public:
 private:
 };
 
-//@brief	//…　メイン関数クラス　…//
+//@brief	//…　メイン関数　…//
 int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,int nCmdShow)
 {
 	Application App;
@@ -48,5 +48,8 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,i
 		assert(false && "Application initialization failed.");
 		return 1;
 	}
+
+	App.APPLoop();
+
     return 0;
 }

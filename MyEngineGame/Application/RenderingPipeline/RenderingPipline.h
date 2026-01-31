@@ -1,13 +1,17 @@
 #pragma once
 //------  RenderingPipline.h  ------  //…　レンダリングパイプライン作成ヘッダーファイル　…//
 //---  参照まとめ  ---
+#include <unordered_map>
 //…　Windows　…//
 #include "../Windows/Window.h"
 //…　DirectX　…//
+#include"DirectX/Device.h"
+#include"DirectX/DrawingCommandRelated/DrawingCommandRelated.h"
 
 
 namespace MyEngineGame::RenderingPipline {
-	//@brief	
+
+	//@brief	//…　レンダリングパイプラインインスタンス作成クラス　…//
 	class MEGRP final
 	{
 	public:
@@ -20,7 +24,8 @@ namespace MyEngineGame::RenderingPipline {
 
 		//@brief	//…　レンダリングパイプライン作成関数　…//
 		//@return	作成の成否
-		[[nodsincard]] bool Initialization()noexcept;
+		[[nodiscard]] bool Initialization()noexcept;
+		
 	private:
 
 	};

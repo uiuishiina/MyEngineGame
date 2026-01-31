@@ -37,6 +37,9 @@
     <Filter Include="MyEngineGame\Application\RenderingPipline\Shader">
       <UniqueIdentifier>{fa84283a-37ef-4627-9b60-656e3a332cc6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated">
+      <UniqueIdentifier>{4a254da8-a04f-4964-868f-e021966c9e53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application\Main\ApplicationMain.cpp">
@@ -54,6 +57,18 @@
     <ClCompile Include="Application\RenderingPipeline\DirectX\Device.cpp">
       <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
     </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandQueue.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandList.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandAllocator.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\DrawingCommandRelated.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\Windows\Window.h">
@@ -67,6 +82,18 @@
     </ClInclude>
     <ClInclude Include="Application\RenderingPipeline\DirectX\Device.h">
       <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandQueue.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandList.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandAllocator.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\DrawingCommandRelated.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
