@@ -44,7 +44,7 @@ namespace MyEngineGame {
             WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, width, height,
             nullptr, nullptr, instance, nullptr);
         if (!MyHandle_) {
-            assert(false && " ウィンドウ作成失敗");
+            assert(false && "Window Creation Failed.");
             return false;
         }
 

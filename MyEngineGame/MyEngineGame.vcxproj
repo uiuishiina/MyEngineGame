@@ -131,6 +131,7 @@
     <ClCompile Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandQueue.cpp" />
     <ClCompile Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\DrawingCommandRelated.cpp" />
     <ClCompile Include="Application\RenderingPipeline\DirectX\DXGI.cpp" />
+    <ClCompile Include="Application\RenderingPipeline\DirectX\SwapChain.cpp" />
     <ClCompile Include="Application\RenderingPipeline\RenderingPipline.cpp" />
     <ClCompile Include="Application\Windows\Window.cpp" />
   </ItemGroup>
@@ -141,6 +142,7 @@
     <ClInclude Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandQueue.h" />
     <ClInclude Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\DrawingCommandRelated.h" />
     <ClInclude Include="Application\RenderingPipeline\DirectX\DXGI.h" />
+    <ClInclude Include="Application\RenderingPipeline\DirectX\SwapChain.h" />
     <ClInclude Include="Application\RenderingPipeline\RenderingPipline.h" />
     <ClInclude Include="Application\Windows\Window.h" />
   </ItemGroup>

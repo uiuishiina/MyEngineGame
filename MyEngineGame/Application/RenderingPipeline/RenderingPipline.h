@@ -28,5 +28,8 @@ namespace MyEngineGame::RenderingPipline {
 		
 	private:
 
+		//…　クラス変数　…//
+
+		std::unordered_map <D3D12_COMMAND_LIST_TYPE, DrawingCommandRelated> TypeCommandRelates_{}; //タイプ別描画コマンドまとめマップ
 	};
 }

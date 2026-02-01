@@ -69,6 +69,9 @@
     <ClCompile Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\DrawingCommandRelated.cpp">
       <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated</Filter>
     </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\SwapChain.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\Windows\Window.h">
@@ -94,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\DrawingCommandRelated.h">
       <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\SwapChain.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
