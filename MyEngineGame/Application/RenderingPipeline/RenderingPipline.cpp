@@ -57,9 +57,11 @@ namespace MyEngineGame::RenderingPipline {
 		//リソースバリア変更
 		ResourceBarrier(CommandRelate_.GetCommandList(), RenderTarget_.GetTarget(BackIndex_), D3D12_RESOURCE_STATE_PRESENT, D3D12_RESOURCE_STATE_RENDER_TARGET);
 		
+		//レンダーターゲット設定
 		D3D12_CPU_DESCRIPTOR_HANDLE Handles[] = {RenderTarget_.GetHandle(BackIndex_)};
 		CommandRelate_.GetCommandList().Get()->OMSetRenderTargets(1, Handles, false, nullptr);
 
+		//背景色設定
 		const float clearColor[] = { 1.0f, 0.0f, 0.0f, 1.0f };  // 赤色でクリア
 		CommandRelate_.GetCommandList().Get()->ClearRenderTargetView(Handles[0], clearColor, 0, nullptr);
 	}
@@ -70,13 +72,17 @@ namespace MyEngineGame::RenderingPipline {
 		//リソースバリア変更
 		ResourceBarrier(CommandRelate_.GetCommandList(), RenderTarget_.GetTarget(BackIndex_), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
 
+		//描画命令書き込み終了
 		CommandRelate_.GetCommandList().Get()->Close();
 
+		//キューに渡す
 		ID3D12CommandList* ppCommandLists[] = { CommandRelate_.GetCommandList().Get() };
 		CommandRelate_.GetCommandQueue().Get()->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
 
+		//スワップチェーン切り替え
 		Swap_.Get()->Present(1, 0);
 
+		//フレーム移行処理
 		CommandRelate_.GetCommandQueue().Get()->Signal(Fence_.Get(), NextFenceValue_);
 		FenceValue_[BackIndex_] = NextFenceValue_;
 		NextFenceValue_++;

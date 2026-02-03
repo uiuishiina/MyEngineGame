@@ -6,6 +6,7 @@
 /*
 	・コマンドアロケーターは描画処理を保存するためのもの
 	・DirectX12の描画命令役
+	・DirectX12の描画命令役
 */
 
 //@brief	//…　CommandAllocator作成クラス　…//

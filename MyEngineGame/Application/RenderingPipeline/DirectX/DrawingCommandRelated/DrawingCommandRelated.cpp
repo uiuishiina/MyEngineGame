@@ -15,11 +15,11 @@ namespace MyEngineGame::RenderingPipline {
 		}
 
 		//コマンドアロケーター作成
-		if (!CommandAllocator_[0].Create(type)) {
+		if (!CommandAllocator_[0].Create(type)) {	//レンダーターゲット用１
 			assert(false && "CommandAllocator_ Creation Failed. (Drawing Command Related)");
 			return false;
 		}
-		if (!CommandAllocator_[1].Create(type)) {
+		if (!CommandAllocator_[1].Create(type)) {	//レンダーターゲット用２
 			assert(false && "CommandAllocator_ Creation Failed. (Drawing Command Related)");
 			return false;
 		}

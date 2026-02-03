@@ -27,7 +27,7 @@ public:
 		}
 
 		//MEGRPçÏê¨
-		if (!MyEngineGame::RenderingPipline::MEGRP::Instance().Initialization()) {
+		if (!RenderingPipline::MEGRP::Instance().Initialization()) {
 			return false;
 		}
 
