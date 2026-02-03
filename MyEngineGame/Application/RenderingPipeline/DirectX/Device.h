@@ -2,8 +2,6 @@
 //------  Device.h  ------  //…　DirectX12_Device作成ヘッダーファイル　…//
 //---  参照  ---
 #include"DXGI.h"
-#include<d3d12.h>
-#include <wrl/client.h>
 
 namespace MyEngineGame::RenderingPipline {
 	//@brief	//…　DirectX12_Device作成クラス　…//
@@ -13,6 +11,8 @@ namespace MyEngineGame::RenderingPipline {
 		//@brief	//…　Deviceクラスインスタンス取得関数　…//
 		//@return	Deviceクラスインスタンス
 		static Device& Instance() noexcept {
+
+			//シングルトンパターンによりプロジェクト内で１つだけに限定
 			static Device instance;
 			return instance;
 		}

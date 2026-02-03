@@ -4,6 +4,10 @@
 #include"../Device.h"
 #include"CommandAllocator.h"
 
+/*
+	・コマンドリストはコマンドアロケーターに描画処理を保存するための入口のようなもの
+*/
+
 //@brief	//…　CommandList作成クラス　…//
 class CommandList final
 {
@@ -17,7 +21,7 @@ public:
 
 	//@brief	//…　CommandList取得関数　…//
 	//@return	CommandListのポインター
-	[[nodiscard]] ID3D12CommandList* Get()const noexcept;
+	[[nodiscard]] ID3D12GraphicsCommandList* Get()const noexcept;
 private:
-	Microsoft::WRL::ComPtr<ID3D12CommandList> CommandList_{};	//コマンドリストインスタンス
+	Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> CommandList_{};	//コマンドリストインスタンス
 };

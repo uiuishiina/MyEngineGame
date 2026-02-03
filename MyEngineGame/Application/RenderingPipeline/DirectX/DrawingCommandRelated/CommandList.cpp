@@ -19,7 +19,7 @@
 
 //@brief	//…　CommandList取得関数　…//
 //@return	CommandListのポインター
-[[nodiscard]] ID3D12CommandList* CommandList :: Get()const noexcept {
+[[nodiscard]] ID3D12GraphicsCommandList* CommandList :: Get()const noexcept {
 	assert(CommandList_ && "Not Found CommandList.");
 	return CommandList_.Get();
 }

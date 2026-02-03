@@ -40,6 +40,9 @@
     <Filter Include="MyEngineGame\Application\RenderingPipline\DirectX\DrawingCommandRelated">
       <UniqueIdentifier>{4a254da8-a04f-4964-868f-e021966c9e53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MyEngineGame\Application\RenderingPipline\DirectX\DescriptorHeap">
+      <UniqueIdentifier>{86556c18-d77c-47b9-b7c7-7579dddddc39}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application\Main\ApplicationMain.cpp">
@@ -72,6 +75,12 @@
     <ClCompile Include="Application\RenderingPipeline\DirectX\SwapChain.cpp">
       <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
     </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\DescriptorHeap\DescriptorHeap_Administrator.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DescriptorHeap</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\DescriptorHeap\DescriptorHeap.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DescriptorHeap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\Windows\Window.h">
@@ -100,6 +109,12 @@
     </ClInclude>
     <ClInclude Include="Application\RenderingPipeline\DirectX\SwapChain.h">
       <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\DescriptorHeap\DescriptorHeap_Administrator.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DescriptorHeap</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\DescriptorHeap\DescriptorHeap.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DescriptorHeap</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

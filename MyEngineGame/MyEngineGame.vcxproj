@@ -125,6 +125,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application\Main\ApplicationMain.cpp" />
+    <ClCompile Include="Application\RenderingPipeline\DirectX\DescriptorHeap\DescriptorHeap.cpp" />
+    <ClCompile Include="Application\RenderingPipeline\DirectX\DescriptorHeap\DescriptorHeap_Administrator.cpp" />
     <ClCompile Include="Application\RenderingPipeline\DirectX\Device.cpp" />
     <ClCompile Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandAllocator.cpp" />
     <ClCompile Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandList.cpp" />
@@ -136,6 +138,8 @@
     <ClCompile Include="Application\Windows\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\DescriptorHeap\DescriptorHeap.h" />
+    <ClInclude Include="Application\RenderingPipeline\DirectX\DescriptorHeap\DescriptorHeap_Administrator.h" />
     <ClInclude Include="Application\RenderingPipeline\DirectX\Device.h" />
     <ClInclude Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandAllocator.h" />
     <ClInclude Include="Application\RenderingPipeline\DirectX\DrawingCommandRelated\CommandList.h" />
