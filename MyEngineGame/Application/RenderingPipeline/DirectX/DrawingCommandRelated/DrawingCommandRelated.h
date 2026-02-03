@@ -25,16 +25,19 @@ namespace MyEngineGame::RenderingPipline {
 		//…　タイプ別描画コマンドオブジェクトアクセス & 取得関数　…//
 
 		//@brief	//…　CommandQueue取得関数　…//
-		//@return	CommandQueueのポインター
-		[[nodiscard]] ID3D12CommandQueue* GetCommandQueue()const noexcept;
+		//@return	CommandQueueインスタンス
+		[[nodiscard]] CommandQueue& GetCommandQueue()noexcept;
 
 		//@brief	//…　CommandAllocator取得関数　…//
-		//@return	CommandAllocatorのポインター
-		[[nodiscard]] ID3D12CommandAllocator* GetCommandAllocator()const noexcept;
+		//@return	CommandAllocatorインスタンス
+		[[nodiscard]] CommandAllocator& GetCommandAllocator(UINT index)noexcept;
 
 		//@brief	//…　CommandList取得関数　…//
-		//@return	CommandListのポインター
-		[[nodiscard]] ID3D12CommandList* GetCommandList()const noexcept;
+		//@return	CommandListインスタンス
+		[[nodiscard]] CommandList& GetCommandList()noexcept;
+
+		//@brief	//…　リセット関数　…//
+		void Reset(UINT index)noexcept;
 
 	private:
 
@@ -42,7 +45,7 @@ namespace MyEngineGame::RenderingPipline {
 
 		D3D12_COMMAND_LIST_TYPE Type_{};			//描画コマンドタイプ
 		CommandQueue		CommandQueue_{};		//CommandQueueクラスインスタンス
-		CommandAllocator	CommandAllocator_{};	//CommandAllocatorクラスインスタンス
+		CommandAllocator	CommandAllocator_[2]{};	//CommandAllocatorクラスインスタンス
 		CommandList			CommandList_{};			//CommandListクラスインスタンス
 	};
 }

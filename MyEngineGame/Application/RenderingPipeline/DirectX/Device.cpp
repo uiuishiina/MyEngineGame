@@ -13,7 +13,7 @@ namespace MyEngineGame::RenderingPipline {
 	[[nodiscard]] bool Device :: Create()noexcept {
 
 		//DXGI作成
-		assert(!DXGI_.Create() && "Device::DXGI.Create() failed.");
+		assert(DXGI_.Create() && "Device::DXGI.Create() failed.");
 
 		//デバイス作成
 		const auto hr = D3D12CreateDevice(DXGI_.GetAdapter(), D3D_FEATURE_LEVEL_12_0, IID_PPV_ARGS(&Device_));

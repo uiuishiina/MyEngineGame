@@ -81,6 +81,12 @@
     <ClCompile Include="Application\RenderingPipeline\DirectX\DescriptorHeap\DescriptorHeap.cpp">
       <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DescriptorHeap</Filter>
     </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\RenderTarget.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\RenderingPipeline\DirectX\Fence.cpp">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\Windows\Window.h">
@@ -115,6 +121,12 @@
     </ClInclude>
     <ClInclude Include="Application\RenderingPipeline\DirectX\DescriptorHeap\DescriptorHeap.h">
       <Filter>MyEngineGame\Application\RenderingPipline\DirectX\DescriptorHeap</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\RenderTarget.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\RenderingPipeline\DirectX\Fence.h">
+      <Filter>MyEngineGame\Application\RenderingPipline\DirectX</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

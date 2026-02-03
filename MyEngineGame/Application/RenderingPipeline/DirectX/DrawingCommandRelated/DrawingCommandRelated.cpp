@@ -13,13 +13,19 @@ namespace MyEngineGame::RenderingPipline {
 			assert(false && "CommandQueue_ Creation Failed. (Drawing Command Related)");
 			return false;
 		}
+
 		//コマンドアロケーター作成
-		if (!CommandAllocator_.Create(type)) {
+		if (!CommandAllocator_[0].Create(type)) {
 			assert(false && "CommandAllocator_ Creation Failed. (Drawing Command Related)");
 			return false;
 		}
+		if (!CommandAllocator_[1].Create(type)) {
+			assert(false && "CommandAllocator_ Creation Failed. (Drawing Command Related)");
+			return false;
+		}
+
 		//コマンドリスト作成
-		if (!CommandList_.Create(type, CommandAllocator_)) {
+		if (!CommandList_.Create(type, CommandAllocator_[0])) {
 			assert(false && "CommandList_ Creation Failed. (Drawing Command Related)");
 			return false;
 		}
@@ -39,20 +45,26 @@ namespace MyEngineGame::RenderingPipline {
 	//…　タイプ別描画コマンドオブジェクトアクセス & 取得関数　…//
 
 	//@brief	//…　CommandQueue取得関数　…//
-	//@return	CommandQueueのポインター
-	[[nodiscard]] ID3D12CommandQueue* DrawingCommandRelated :: GetCommandQueue()const noexcept {
-		return CommandQueue_.Get();
+	//@return	CommandQueueインスタンス
+	[[nodiscard]] CommandQueue& DrawingCommandRelated :: GetCommandQueue()noexcept {
+		return CommandQueue_;
 	}
 
 	//@brief	//…　CommandAllocator取得関数　…//
-	//@return	CommandAllocatorのポインター
-	[[nodiscard]] ID3D12CommandAllocator* DrawingCommandRelated :: GetCommandAllocator()const noexcept {
-		return CommandAllocator_.Get();
+	//@return	CommandAllocatorインスタンス
+	[[nodiscard]] CommandAllocator& DrawingCommandRelated :: GetCommandAllocator(UINT index)noexcept {
+		return CommandAllocator_[index];
 	}
 
 	//@brief	//…　CommandList取得関数　…//
-	//@return	CommandListのポインター
-	[[nodiscard]] ID3D12CommandList* DrawingCommandRelated :: GetCommandList()const noexcept {
-		return CommandList_.Get();
+	//@return	CommandListインスタンス
+	[[nodiscard]] CommandList& DrawingCommandRelated :: GetCommandList()noexcept {
+		return CommandList_;
+	}
+
+	//@brief	//…　リセット関数　…//
+	void DrawingCommandRelated :: Reset(UINT index)noexcept {
+		CommandAllocator_[index].Reset();
+		CommandList_.Get()->Reset(CommandAllocator_[index].Get(), nullptr);
 	}
 }

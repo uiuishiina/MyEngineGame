@@ -22,6 +22,9 @@ public:
 	//@brief	//…　CommandAllocator取得関数　…//
 	//@return	CommandAllocatorのポインター
 	[[nodiscard]] ID3D12CommandAllocator* Get()const noexcept;
+
+	//@brief	//…　CommandAllocatorリセット関数　…//
+	void Reset()noexcept;
 private:
 	Microsoft::WRL::ComPtr <ID3D12CommandAllocator> CommandAllocator_{};	//コマンドアロケーターインスタンス
 };

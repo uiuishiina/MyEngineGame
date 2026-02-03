@@ -26,6 +26,11 @@ public:
 			return false;
 		}
 
+		//MEGRPçÏê¨
+		if (!MyEngineGame::RenderingPipline::MEGRP::Instance().Initialization()) {
+			return false;
+		}
+
 		return true;
 	}
 
@@ -33,7 +38,9 @@ public:
 	void APPLoop()const noexcept {
 		while (Window::Instance().MessageLoop())
 		{
+			MyEngineGame::RenderingPipline::MEGRP::Instance().BeforeUpdate();
 			//UpDataèàóù
+			MyEngineGame::RenderingPipline::MEGRP::Instance().LateUpdate();
 		}
 	}
 private:

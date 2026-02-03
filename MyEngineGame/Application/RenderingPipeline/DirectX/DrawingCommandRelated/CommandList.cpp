@@ -13,6 +13,8 @@
 		assert(false && "CommandList Creation Failed.");
 		return false;
 	}
+	// コマンドリストを初期化状態に設定
+	CommandList_->Close();
 
 	return true;
 }

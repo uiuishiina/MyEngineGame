@@ -22,3 +22,9 @@
     assert(CommandAllocator_ && "Not Found CommandAllocator.");
     return CommandAllocator_.Get();
 }
+
+//@brief	//…　CommandAllocatorリセット関数　…//
+void CommandAllocator :: Reset()noexcept {
+    assert(CommandAllocator_ && "Not Found CommandAllocator.");
+    CommandAllocator_->Reset();
+}

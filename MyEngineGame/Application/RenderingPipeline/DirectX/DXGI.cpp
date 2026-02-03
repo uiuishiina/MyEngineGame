@@ -51,29 +51,34 @@ namespace MyEngineGame::RenderingPipline {
 
 		//アダプター取得
 		auto count_ = 0;
-		IDXGIAdapter1* ProvisionalAdapter_{};
+		Microsoft::WRL::ComPtr<IDXGIAdapter1> ProvisionalAdapter_{};
 
 		//アダプター選択
 		//終了条件…ファクトリーのアダプターが見つからなかったとき
-		while (DXGIFactory_->EnumAdapters1(count_, &DXGIAdapter_) != DXGI_ERROR_NOT_FOUND) {
+		while (DXGIFactory_->EnumAdapters1(count_, &ProvisionalAdapter_) != DXGI_ERROR_NOT_FOUND) {
 			//アダプター調査
 			DXGI_ADAPTER_DESC1 desc_{};
 			ProvisionalAdapter_->GetDesc1(&desc_);
 
+			count_++;
+
 			//ソフトウェアアダプター
 			if (desc_.Flags & DXGI_ADAPTER_FLAG_SOFTWARE) {
-				ProvisionalAdapter_->Release();
+				//ProvisionalAdapter_->Release();//compointerをRelese()するとよくない
 				continue;
 			}
+
 			//動作チェック
-			if (FAILED(D3D12CreateDevice(ProvisionalAdapter_, D3D_FEATURE_LEVEL_11_0, _uuidof(ID3D12Device), nullptr))) {
-				DXGIAdapter_ = ProvisionalAdapter_;
-				break;
+			if (FAILED(D3D12CreateDevice(ProvisionalAdapter_.Get(), D3D_FEATURE_LEVEL_11_0, _uuidof(ID3D12Device), nullptr))) {
+				continue;
 			}
+
+			DXGIAdapter_ = ProvisionalAdapter_;
+			break;
 		}
 
 		//チェック
-		assert(!DXGIAdapter_ && "Unable to seted DXGIAdapter");
+		assert(DXGIAdapter_ && "Unable to Set DXGIAdapter");
 
 		return true;
 	}
@@ -82,7 +87,7 @@ namespace MyEngineGame::RenderingPipline {
 	//@return	DXGIファクトリーアドレス
 	[[nodiscard]] IDXGIFactory4* DXGI :: GetFactory()const noexcept {
 		//check
-		assert(!DXGIFactory_ && "Not Found DXGIFactory_. Possibly it has not been created or has been deleted.");
+		assert(DXGIFactory_ && "Not Found DXGIFactory_. Possibly it has not been created or has been deleted.");
 		return DXGIFactory_.Get();
 	}
 
@@ -90,7 +95,7 @@ namespace MyEngineGame::RenderingPipline {
 	//@return	ディスプレイアダプターアドレス
 	[[nodiscard]] IDXGIAdapter1* DXGI :: GetAdapter()const noexcept {
 		//check
-		assert(!DXGIAdapter_ && "Not Found DXGIAdapter_. Possibly it has not been created or has been deleted.");
+		assert(DXGIAdapter_ && "Not Found DXGIAdapter_. Possibly it has not been created or has been deleted.");
 		return DXGIAdapter_.Get();
 	}
 }
